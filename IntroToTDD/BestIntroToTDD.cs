@@ -1,14 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace IntroToTDD
+﻿namespace IntroToTDD
 {
     public class BestIntroToTDD
     {
         public BestIntroToTDD()
         {
 
+        }
+
+        public string Add(string a, string b)
+        {
+            return string.Empty;
         }
     }
 }
