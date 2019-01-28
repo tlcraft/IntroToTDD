@@ -6,12 +6,73 @@ namespace Tests
     public class FractionTests
     {
         [Fact]
+        public void Fraction_Add_TenFifths_TwentyTens()
+        {
+            Fraction tenFifths = new Fraction(10, 5);
+            Fraction twentyTens = new Fraction(20, 10);
+
+            Assert.True(tenFifths.Add(twentyTens) == new Fraction(4));
+        }
+        
+        [Fact]
+        public void Fraction_Add_OneHalf()
+        {
+            Fraction oneHalf = new Fraction(1, 2);
+
+            Assert.True(oneHalf.Add(oneHalf) == new Fraction(1));
+        }
+
+        [Fact]
+        public void Fraction_Add_OneFourth_SevenEighths()
+        {
+            Fraction oneFourth = new Fraction(1, 4);
+            Fraction sevenEighths = new Fraction(7, 8);
+
+            Assert.True(oneFourth.Add(sevenEighths) == new Fraction(9, 8));
+        }
+
+        [Fact]
+        public void Fraction_Add_One_Two()
+        {
+            Fraction one = new Fraction(1);
+            Fraction two = new Fraction(2);
+
+            Assert.True(one.Add(two) == new Fraction(3));
+        }
+
+        [Fact]
+        public void Fraction_Add_Five_OneFourth()
+        {
+            Fraction five = new Fraction(5);
+            Fraction oneFourth = new Fraction(1, 4);
+
+            Assert.True(five.Add(oneFourth) == new Fraction(21, 4));
+        }
+
+        [Fact]
+        public void Fraction_Add_OneHalf_OneThird()
+        {
+            Fraction oneHalf = new Fraction(1, 2);
+            Fraction oneThird = new Fraction(1, 3);
+
+            Assert.True(oneHalf.Add(oneThird) == new Fraction(5, 6));
+        }
+
+        [Fact]
+        public void Fraction_Add_Zero()
+        {
+            Fraction zero = new Fraction(0);
+
+            Assert.True(zero.Add(zero) == new Fraction(0));
+        }
+
+        [Fact]
         public void Fraction_Add_SevenFourths_FourFifths()
         {
             Fraction sevenFourths = new Fraction(7, 4);
             Fraction fourFifths = new Fraction(4, 5);
 
-            Assert.True(sevenFourths.Add(fourFifths) == new Fraction(47, 15));
+            Assert.True(sevenFourths.Add(fourFifths) == new Fraction(51, 20));
         }
 
         [Fact]
@@ -88,19 +149,5 @@ namespace Tests
         Allow ability to add to whole numbers
 
         */
-
-        /*
-        
-        Test List
-
-        5 + 1/4 = 21/4
-        1/2 + 1/3 = 5/6
-        0 + 0 = 0
-        1 + 2 = 3
-        1/2 + 1/2 = 1
-        10/5 + 20/10 = 4
-        1/4 + 7/8 = 9/8
-
-         */
     }
 }
