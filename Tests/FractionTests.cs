@@ -92,6 +92,13 @@ namespace Tests
         }
 
         [Fact]
+        public void Fraction_WholeNumber_ToString()
+        {
+            Fraction oneHalf = new Fraction(6);
+            Assert.True(oneHalf.ToString() == "6");
+        }
+
+        [Fact]
         public void Fraction_Equals()
         {
             Fraction oneHalf = new Fraction(1, 2);
