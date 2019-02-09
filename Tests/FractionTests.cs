@@ -59,6 +59,15 @@ namespace Tests
         }
 
         [Fact]
+        public void Fraction_Add_One_Two_NegativeSum()
+        {
+            Fraction one = new Fraction(-1);
+            Fraction two = new Fraction(-2);
+
+            Assert.True(one.Add(two) == new Fraction(-3));
+        }
+
+        [Fact]
         public void Fraction_Add_Five_OneFourth()
         {
             Fraction five = new Fraction(5);
