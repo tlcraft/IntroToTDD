@@ -22,7 +22,7 @@ namespace IntroToTDD
 
         public Fraction Add(Fraction frac2)
         {
-            var frac1 = new Fraction(this.numerator, this.denominator);
+            var frac1 = this;
 
             if (frac2.denominator != frac1.denominator)
             {
